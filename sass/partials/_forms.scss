@@ -1,0 +1,62 @@
+::placeholder {
+  color: white;
+}
+
+.form-common {
+  border: none;
+  height: 25px;
+  padding: 0.2rem 0.3rem;
+  color: white;
+}
+
+.form-search {
+
+  display: none;
+
+    input {
+      @extend .form-common;
+      background: darken(getColour(primary), 10%);
+    }
+
+    button {
+      @extend .form-common;
+      background: getColour(secondary);
+      width: 35px;
+
+      &:hover {
+        background: lighten(getColour(primary), 10%);
+        cursor: pointer;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+}
+
+.form-newsletter {
+  margin-bottom: 2em;
+
+  input {
+    @extend .form-common;
+    height: 45px;
+    width: 200px;
+    font-size: 14px;
+    padding: 0.4em;
+
+    &::placeholder {
+      color: black;
+    }
+
+  }
+
+  button {
+    @extend .form-common;
+    background: getColour(primary);
+    height: 45px;
+    width: 80px;
+  }
+
+
+}

@@ -1,0 +1,21 @@
+footer {
+  background: getColour(secondary);
+  flex-shrink: 0;
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+
+  .container {
+    @extend .container-flex
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: getColour(primary);
+    }
+  }
+
+}
